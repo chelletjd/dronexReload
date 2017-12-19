@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+import swal from 'sweetalert2';
 
 window.Vue = require('vue');
 
@@ -62,26 +63,38 @@ boton.addEventListener('click', function(evt) {
 	cost = 4;
 }
 	var bill = cost * Number(wei.value);
-	
+	document.querySelector('#cost').innerHTML = '<input type="hidden" name="cost" value="'+bill+'">';
 	if(isValid){
 		swal({
-	    title: "Are you sure?",
-	    text: "You will not be able to recover this imaginary file!",
-	    type: "warning",
-	    showCancelButton: true,
-	    confirmButtonColor: '#DD6B55',
-	    confirmButtonText: 'Yes, I am sure!',
-	    cancelButtonText: "No, cancel it!",
-	    closeOnConfirm: false,
-	    closeOnCancel: false
-	},
-	function(isConfirm){
-	  if (isConfirm){
-	    document.querySelector("#form").submit();
-	   } else {
-	     
-	   }
-	 });
+		  title: 'Are you sure?',
+		  text: "Your shipment cost is:" + bill + "$.",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonText: 'Confirm Shipment!',
+		  cancelButtonText: 'Cancel Shipment!!',
+		  confirmButtonClass: 'btn btn-success',
+		  cancelButtonClass: 'btn btn-danger',
+		  buttonsStyling: false,
+		  reverseButtons: true
+		}).then((result) => {
+		  if (result.value) {
+		  	document.querySelector("#form").submit();
+		    // swal(
+		    //   'Deleted!',
+		    //   'Your file has been deleted.',
+		    //   'success'
+		    // )
+		  // result.dismiss can be 'cancel', 'overlay',
+		  // 'close', and 'timer'
+		  } else if (result.dismiss === 'cancel') {
+
+		    // swal(
+		    //   'Cancelled',
+		    //   'Your imaginary file is safe :)',
+		    //   'error'
+		    // )
+		  }
+		});
 		
 	}
 

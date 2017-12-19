@@ -68,6 +68,9 @@
               <input type="text" class="form-control" id="recId" name="recId" placeholder="V-12345678">
             </div>
           </div>
+          <div class="col-sm-12 col-md-4" id="cost">
+              
+          </div>
           <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
               <button type="button" id="shipment" class="btn btn-block btn-success">Submit</button>

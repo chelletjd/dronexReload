@@ -20,7 +20,7 @@
 					@foreach($ship as $sh)
 					<tr>
 						<td>{{ $sh->id }}</td>
-						<td>255</td>
+						<td>{{ $sh->cost }}</td>
 						<td>{{ $sh->shipAd }}</td>
 						<td>{{ $sh->recepAd }}</td>
 						<td>{{ $sh->weight }}</td>
