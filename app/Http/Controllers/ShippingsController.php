@@ -12,7 +12,7 @@ class ShippingsController extends Controller
     public function store(Request $request)
     {
         Shipping::create($request->all());
-        return view('shipping');
+        return redirect('/shipping/show');
     }
 
     public function show()

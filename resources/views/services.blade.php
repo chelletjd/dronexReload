@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <form class="form-horizontal borde" method="POST" action="/shipping/store">
+        <form class="form-horizontal borde" id="form" method="POST" action="/shipping/store">
           {{ csrf_field() }}
           <div class="form-group">
             <div class="col-sm-12 col-md-4 ">
@@ -31,16 +31,16 @@
             <label class="control-label col-sm-2 col-md-2 col-md-offset-2" for="text">Shipping method:</label>
             <div class="radio">
               <label class="col-sm-2 col-md-1">
-                <input type="radio" value="o-h" name="method">Office - House
+                <input type="radio" id="r1" value="o-h" name="method">Office - House
               </label>
               <label class="col-sm-2 col-md-1">
-                <input type="radio" value="o-o" name="method">Office - Office
+                <input type="radio" id="r2" value="o-o" name="method">Office - Office
               </label>
               <label class="col-sm-2 col-md-1">
-                <input type="radio" value="h-o" name="method">House - Office
+                <input type="radio" id="r3" value="h-o" name="method">House - Office
               </label>
               <label class="col-sm-2 col-md-1">
-                <input type="radio" value="h-h" name="method">House - House
+                <input type="radio" id="r4" value="h-h" name="method">House - House
               </label>
             </div>
           </div>
@@ -70,7 +70,7 @@
           </div>
           <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-              <button type="submit" class="btn btn-block btn-success">Submit</button>
+              <button type="button" id="shipment" class="btn btn-block btn-success">Submit</button>
             </div>
           </div>
         </form>

@@ -25,12 +25,12 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav color">
           <li class="menu"><a href="/">Home</a></li><!--class="active"-->
-          <li class="menu"><a href="about">About Us</a></li>
+          <li class="menu"><a href="/about">About Us</a></li>
           @if (Auth::check())
-          <li class="menu"><a href="services">Services</a></li>
+          <li class="menu"><a href="/services">Services</a></li>
           @endif
-          <li class="menu"><a href="prices">Prices</a></li>
-          <li class="menu"><a href="contact">Contact Us</a></li>
+          <li class="menu"><a href="/prices">Prices</a></li>
+          <li class="menu"><a href="/contact">Contact Us</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right color">
           <!-- Authentication Links -->
