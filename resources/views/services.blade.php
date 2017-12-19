@@ -11,9 +11,8 @@
         <form class="form-horizontal borde" method="POST" action="/shipping/store">
           {{ csrf_field() }}
           <div class="form-group">
-            <label class="control-label col-sm-1 col-md-2 col-md-offset-2" for="text">ID:</label>
             <div class="col-sm-12 col-md-4 ">
-              <input type="text" class="form-control" id="ced" name="userID" value="{{ Auth::user()->id }}" placeholder="V-12345678">
+              <input type="hidden" class="form-control" id="ced" name="userID" value="{{ Auth::user()->id }}" placeholder="V-12345678">
             </div>
           </div>
           <div class="form-group">

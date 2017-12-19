@@ -44,13 +44,15 @@
               </a>
 
               <ul class="dropdown-menu color" role="menu">
+                <li>
+                  <a href="/shipping/show">My Shipments</a>
+                </li>
                 <li class="menu">
                   <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                     Logout
                   </a>
-
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                   </form>
@@ -99,9 +101,12 @@
               <i class="fa fa-square-o fa-stack-2x"></i>
               <i class="fa fa-github fa-stack-1x"></i>
             </span>GitHub</a>
-          </div><br/>
+          </div><br/>   
         </div>
         <div class="col-xs-12"><hr><p>Copyright © ChelleT</p></div>
+        <button title="Back to top" class="scroll">
+          <span class="arrow-up glyphicon glyphicon-chevron-up"></span>
+        </button>
       </div>
     </footer>
   </div>

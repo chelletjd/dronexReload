@@ -990,8 +990,24 @@ window.Vue = __webpack_require__(35);
 Vue.component('example', __webpack_require__(38));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app'
 });
+
+var intervalId = 0;
+var $scrollButton = document.querySelector('.scroll');
+
+function scrollStep() {
+    if (window.pageYOffset === 0) {
+        clearInterval(intervalId);
+    }
+    window.scroll(0, window.pageYOffset - 50);
+}
+
+function scrollToTop() {
+    intervalId = setInterval(scrollStep, 16.66);
+}
+
+$scrollButton.addEventListener('click', scrollToTop);
 
 /***/ }),
 /* 11 */

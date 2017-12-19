@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Shipping;
+use Illuminate\Support\Facades\Auth;
+
 
 class ShippingsController extends Controller
 {
     public function store(Request $request)
     {
         Shipping::create($request->all());
+        return view('shipping');
     }
 
-    public function show($id)
+    public function show()
     {
- 		Auth::user()->id;
+ 		$ship = shipping::where('userID', Auth::user()->id)->get();
+
+ 		return view('shipping',['ship'=>$ship]);
     }
 }

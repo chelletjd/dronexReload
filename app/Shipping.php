@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Shipping extends Model
 {
     protected $fillable = [
-       'ced', 'method', 'shipAd', 'recepAd', 'weight', 'recId',
+       'userID', 'method', 'shipAd', 'recepAd', 'weight', 'recId',
     ];
 
-    public function category(){
+    public function user(){
     	return $this->belongsTo(User::class);
     }
 }

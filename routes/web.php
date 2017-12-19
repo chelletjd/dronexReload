@@ -44,6 +44,7 @@ Route::get('/shipping', function () {
 });
 
 Route::post('/shipping/store', 'ShippingsController@store');
+Route::get('/shipping/show', 'ShippingsController@show');
 
 Auth::routes();
 

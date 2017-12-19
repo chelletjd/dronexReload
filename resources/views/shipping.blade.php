@@ -11,16 +11,22 @@
 						<th>Shipping N°</th>
 						<th>Shipping Cost</th>
 						<th>Shipping Address</th>
+						<th>Reception Address</th>
+						<th>Weigth</th>
 						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
+					@foreach($ship as $sh)
 					<tr>
-						<td>1</td>
-						<td>155</td>
-						<td>South Beach</td>
-						<td>Delivered</td>
+						<td>{{ $sh->id }}</td>
+						<td>255</td>
+						<td>{{ $sh->shipAd }}</td>
+						<td>{{ $sh->recepAd }}</td>
+						<td>{{ $sh->weight }}</td>
+						<td>{{ $sh->status }}</td>
 					</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</div>
