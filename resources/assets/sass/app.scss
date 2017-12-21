@@ -89,6 +89,17 @@ background-color: $yellow !important;
 
 }
 
+#colorr{
+	 > li {
+			// background-color: $blue !important;
+			color: $yellow !important;
+		:hover {
+			background-color: $yellow !important;
+			color: $blue !important;
+		}
+	}
+}
+
 .barra2{
 	border-color: $blue !important;
 }

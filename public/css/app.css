@@ -11488,6 +11488,15 @@ html {
   z-index: 1000;
 }
 
+#colorr > li {
+  color: #FECB56 !important;
+}
+
+#colorr > li :hover {
+  background-color: #FECB56 !important;
+  color: #0A7984 !important;
+}
+
 .barra2 {
   border-color: #0A7984 !important;
 }

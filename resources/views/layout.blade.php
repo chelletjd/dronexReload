@@ -38,16 +38,16 @@
             <li class="menu"><a href="{{ route('register') }}"><span class="fa fa-user-o"></span> Sign Up</a></li>
             <li class="menu"><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           @else
-            <li class="dropdown menu">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 {{ Auth::user()->name }} <span class="caret"></span>
               </a>
 
-              <ul class="dropdown-menu color" role="menu">
+              <ul id="colorr" class="dropdown-menu colorr" role="menu">
                 <li>
                   <a href="/shipping/show">My Shipments</a>
                 </li>
-                <li class="menu">
+                <li class="">
                   <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
